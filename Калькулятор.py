@@ -1,16 +1,4 @@
-print("Calculator 1.1\nYou can use +,-,*,/\nEnter 'clear' for starting new caclulation\nEnter 'x' for exit")
-
-while True:
-	result = input()
-	if result == "x":
-			exit()
-	try:
-		num = float(result)
-		break
-	except ValueError:
-		print("Incorrect number")
-		continue
-	use_operation()
+print("Calculator 1.2\nYou can use +,-,*,/\nEnter 'clear' for starting new caclulation\nEnter 'x' for exit")
 
 def input_num():
 	while True:
@@ -31,7 +19,6 @@ def use_operation():
 		if std_in_op == "x":
 			exit()
 		if std_in_op == "clear":
-			num = 0
 			num = input_num()
 			continue
 		if std_in_op == "+":
@@ -49,6 +36,7 @@ def use_operation():
 		else:
 			print("Incorrect operation")
 
+num = input_num()
 while True:
 	use_operation()
 	print("=" , num)
